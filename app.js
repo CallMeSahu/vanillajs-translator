@@ -1,10 +1,14 @@
-var btnStart = document.querySelector("#btn-start");
+var inputText = document.querySelector("#input-txt");
+var btnSubmit = document.querySelector("#btn-submit");
+var outputText = document.querySelector("#output-txt");
 
-function clickEventHandler(){
-    alert("Start button click!")
-    console.log("Start button is click!")
+function submitEventHandler(){
+    var input = inputText.value;
+    
+    var output = input + " is awsome 💯."
+
+    outputText.innerText = output.toUpperCase();    
 }
 
 
-
-btnStart.addEventListener("click", clickEventHandler);
+btnSubmit.addEventListener("click", submitEventHandler);
